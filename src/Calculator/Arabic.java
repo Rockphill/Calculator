@@ -1,6 +1,7 @@
 package Calculator;
 
 public class Arabic extends Number {
+
     private int value1;
     private int value2;
     private int result;
@@ -19,12 +20,13 @@ public class Arabic extends Number {
     }
 
     public void div() {
-        try {
+        try{
             this.result = value1 / value2;
         } catch (ArithmeticException e) {
             System.out.print("Деление на 0! ");
             return;
         }
+
     }
 
     public void mul() {
@@ -32,7 +34,7 @@ public class Arabic extends Number {
     }
 
     @Override
-    public String getStringResult() {
+    public int getResult() {
         return result;
     }
 
@@ -53,12 +55,11 @@ public class Arabic extends Number {
         this.result = result;
     }
 
-    public int setValue1(int value1) {
+    public void setValue1(int value1) {
         this.value1 = value1;
     }
 
     public void setValue2(int value2) {
-
-
+        this.value2 = value2;
     }
 }
